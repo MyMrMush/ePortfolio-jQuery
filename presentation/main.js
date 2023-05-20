@@ -8,6 +8,9 @@ const slides = [
     'slides/7-syntax/7-syntax',
     'slides/8-dom-traversal/8-dom-traversal',
     'slides/9-events/9-events',
+    'slides/10-ajax/10-ajax',
+    'slides/11-compatibility/11-compatibility',
+    'slides/12-live-coding/12-live-coding',
 ];
 let currentSlide = 0;
 let presenter = new URLSearchParams(window.location.search).get('presenter');

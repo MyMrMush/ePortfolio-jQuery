@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 style="font-size: 4em">Improvements with jQuery - AJAX</h1>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col fs-3">
+            <div class="row text-center">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    var xhr = new XMLHttpRequest(); <br>
+                    xhr.open('POST', '/api/endpoint', true); <br>
+                    xhr.setRequestHeader('Content-Type', 'application/json'); <br>
+                    <br>
+                    xhr.onreadystatechange = function() { <br>
+                    &nbsp;&nbsp;if (xhr.readyState === 4) { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;if (xhr.status === 200) { <br> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Request succeeded:'); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(JSON.parse(xhr.responseText)); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;} else { <br> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Request failed:'); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(xhr.statusText); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;} <br> 
+                    &nbsp;&nbsp;} <br>
+                    }; <br>
+                    <br>
+                    var data = JSON.stringify({ <br>
+                    &nbsp;&nbsp;param1: 'value1', <br>
+                    &nbsp;&nbsp;param2: 'value2' <br>
+                    }); <br>
+                    <br>
+                    xhr.send(data); <br>
+                </code>
+            </div>
+        </div>
+        <div class="col fs-3">
+            <div class="row text-center">
+                <h2>jQuery</h2>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    $.ajax({ <br>
+                        &nbsp;&nbsp;url: '/api/endpoint', <br>
+                        &nbsp;&nbsp;type: 'POST', <br>
+                        &nbsp;&nbsp;dataType: 'json', <br>
+                        &nbsp;&nbsp;data: { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;param1: 'value1', <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;param2: 'value2' <br>
+                        &nbsp;&nbsp;}, <br>
+                        &nbsp;&nbsp;success: function(response) { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Request succeeded:'); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(response); <br>
+                        &nbsp;&nbsp;}, <br>
+                        &nbsp;&nbsp;error: function(xhr, status, error) { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Request failed:'); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(error); <br>
+                        &nbsp;&nbsp;} <br>
+                        &nbsp;&nbsp;}); <br>
+                </code>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 style="font-size: 4em">Improvements with jQuery - Browser Compatibility</h1>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col fs-3">
+            <div class="row text-center">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    element.classList.toggle("class-name");<br>
+                    <br>
+                    // usually needs to be <br>
+                    if (element.classList.contains("class-name")) {<br>
+                    &nbsp;&nbsp;element.classList.remove("class-name");<br>
+                    } else {<br>
+                    &nbsp;&nbsp;element.classList.add("class-name");<br>
+                    }<br>
+                </code>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    // not supported in IE <br>
+                    elements.forearch((element) => {<br>
+                    &nbsp;&nbsp;element.classList.add("cold"); <br>
+                    &nbsp;&nbsp;element.classList.remove("hot"); <br>
+                    });
+                </code>
+            </div>
+        </div>
+        <div class="col fs-3">
+            <div class="row text-center">
+                <h2>jQuery</h2>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    $("#element").toggleClass("class-name");<br>
+                </code>
+            </div>
+        </div>
+    </div>
+</div>
