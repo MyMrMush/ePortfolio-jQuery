@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 style="font-size: 4em">Improvements with jQuery - Events</h1>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col fs-3">
+            <div class="row text-center">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    document.getElementById("#button")<br>
+                    .addEventListener("click", () => { <br>
+                    &nbsp;&nbsp;//some code or someFunction()<br>
+                    }); <br>
+                    document.getElementById("#button")<br>
+                    .addEventListener("mouseover", () => { <br>
+                    &nbsp;&nbsp;//same code or someFunction()<br>
+                    }); <br>
+                    function someFunction() { <br>
+                    &nbsp;&nbsp;//some code <br>
+                    } <br>
+                </code>
+            </div>
+        </div>
+        <div class="col fs-3">
+            <div class="row text-center">
+                <h2>jQuery</h2>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                   $("#button").on("click mouseover", () => { <br>
+                     &nbsp;&nbsp;//some code <br>
+                     }); <br>
+                </code>
+            </div>
+        </div>
+    </div>
+</div>

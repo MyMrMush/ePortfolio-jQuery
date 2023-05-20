@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 style="font-size: 4em">Improvements with jQuery - DOM traversal</h1>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col fs-3">
+            <div class="row text-center">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    document.getElementById("output").innerHTML = <br>
+                    document.querySelector("div span").innerHTML; 
+                    <br><br>
+                </code>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    document.querySelector(".button").forEach((element) => { <br>
+                    &nbsp;&nbsp;if (element.classList.contains("disabled")) { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;element.classList.remove("disabled"); <br>
+                    &nbsp;&nbsp;} else { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;element.classList.add("disabled"); <br>
+                    &nbsp;&nbsp;} <br>
+                    });
+                </code>
+            </div>
+        </div>
+        <div class="col fs-3">
+            <div class="row text-center">
+                <h2>jQuery</h2>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    $(".output").html( <br>
+                    &nbsp;&nbsp;$("div span").html() <br>
+                    );  
+                    <br>
+                </code>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    $('#button').toggleClass(disabled);
+                    <br><br><br><br><br><br><br><br>
+                </code>
+            </div>
+        </div>
+    </div>
+</div>

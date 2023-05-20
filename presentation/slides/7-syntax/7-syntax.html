@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 style="font-size: 4em">Improvements with jQuery - Syntax</h1>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col fs-3">
+            <div class="row text-center">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    document.getElementById('content')<br>&nbsp;&nbsp;.innerHTML = 'Hello World!';
+                </code>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    function hasClass(element, className) { <br>
+                    &nbsp;&nbsp;return (' ' + element.className + ' ') <br>
+                    &nbsp;&nbsp;.indexOf(' ' + className+ ' ') > -1; <br>
+                    }
+                </code>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    document.addEventListener("DOMContentLoaded",
+                    <br>() => { <br>
+                    &nbsp;&nbsp;// Code executed on load <br>
+                    }); <br><br>
+                </code>
+            </div>
+        </div>
+        <div class="col fs-3">
+            <div class="row text-center">
+                <h2>jQuery</h2>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    $('#content').html('Hello World!');
+                    <br><br>
+                </code>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    $(element).hasClass(className);
+                    <br><br><br><br>
+                </code>
+            </div>
+            <div class="row mt-2">
+                <code class="mt-4 border rounded">
+                    $(() => { <br>
+                    &nbsp;&nbsp;// Code executed on load <br>
+                    }); <br><br><br>
+                </code>
+        </div>
+    </div>
+</div>
