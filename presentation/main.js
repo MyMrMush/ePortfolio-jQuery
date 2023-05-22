@@ -35,6 +35,8 @@ $(() => {
     });
     $('#prev').on('click', () => changeSlide(-1));
     $('#next').on('click', () => changeSlide(1));
+    $('#first').on('click', () => changeSlide(-currentSlide));
+    $('#last').on('click', () => changeSlide(slides.length - currentSlide - 1));
 
 
 });
@@ -52,5 +54,7 @@ function loadSlide() {
 function changeSlide(direction) {
     currentSlide += direction;
     currentSlide = Math.max(0, Math.min(slides.length - 1, currentSlide));
+    $('#first, #prev').prop('disabled', currentSlide === 0);
+    $('#last, #next').prop('disabled', currentSlide === slides.length - 1);
     loadSlide();
 }
